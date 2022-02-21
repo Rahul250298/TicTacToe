@@ -8,10 +8,10 @@ namespace TicTacToe
 {
     public class TicTacToeGame
     {
-        public  void StartGame()
+        public void StartGame()
         {
             char[] board = new char[10];
-            for (int i = 1; i <=board.Length; i++)
+            for (int i = 1; i <= board.Length; i++)
             {
                 board[i] = ' ';
             }
@@ -19,8 +19,25 @@ namespace TicTacToe
             {
                 Console.WriteLine(i);
             }
-          
 
+
+        }
+        public void toss()
+        {
+            Random random = new Random();
+            int value = random.Next(0, 2);
+            if (value == 0)
+            {
+                Console.WriteLine("Computer plays first");
+                Console.WriteLine("(cmputer inputs 'x'");
+            }
+            if (value == 1)
+            {
+
+                Console.WriteLine("user play first");
+                Console.WriteLine("( User inputs 'o'");
+
+            }
         }
     }
 }
